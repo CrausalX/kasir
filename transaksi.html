@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Transaksi | Toko Toko-an</title>
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+        <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="css/app.min.css">
+    </head>
+
+    <body data-ma-theme="green">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+                </div>
+            </div>
+
+            <header class="header">
+                <div class="header__logo">
+                    <ul class="top-nav">
+                        <li class="hidden-xl-up"><a href="" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+                        
+                        <li>
+                            <div class="user__info">
+                                <img class="user__img" src="demo/img/headers/logo.png" style="border-radius:0">
+                                <a href="index.html">
+                                    <div style="font-weight:400;font-size:14px;color:#fff;">TOKO TOKO-AN</div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="search">
+                    <div class="search__inner">
+                        <input type="text" class="search__text" placeholder="Cari barang...">
+                        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                    </div>
+                </form>
+
+                <ul class="top-nav">
+                    <li class="hidden-xl-up"><a href="" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+
+                    <li class="dropdown">
+                        <div>
+                            <div class="user__info" data-toggle="dropdown">
+                                <img class="user__img" src="demo/img/profile-pics/8.jpg" alt="">
+                                <div>
+                                    <div><b>Malinda Hollaway</b></div>
+                                    <div>Kasir</div>
+                                </div>
+                            </div>
+    
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="pengaturan-kasir.html">Pengaturan</a>
+                                <a class="dropdown-item" href="login.html">Keluar</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </header>
+
+            <section class="content content--full">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1>Kasir</h1>
+                        <small>
+                            Selamat datang di Toko Toko-an &nbsp;|&nbsp;
+                            <a href="index.html">
+                                Coba mode Admin
+                            </a>
+                        </small>
+                    </header>
+
+                    <div class="row">
+                        <div class="col text-center">
+                            <div class="card">
+                                <div class="card-body card-checkout">
+                                    <div class="count-checkout">
+                                        <div class="count-checkout-body">
+                                            <h1>250</h1>
+                                            Transaksi
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-lg btn-success btn--icon-text btn-checkout" data-toggle="modal" data-target="#modal-form">
+                                        <i class="zmdi zmdi-shopping-cart"></i> TRANSAKSI BARU
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="footer" style="margin-top:30px">
+                        <p>© Toko Toko-an. All rights reserved.</p>
+                    </footer>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal: Form -->
+        <div class="modal fade" id="modal-form" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title pull-left" style="padding-bottom:10px">
+                            TRANSAKSI
+                        </h5>
+                    </div>
+                    <div class="modal-body bg-light">
+                        <div id="form-checkout">
+                            <div class="card" style="margin-bottom:15px">
+                                <div class="card-body">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label required>Nama Barang</label>
+                                                <select class="select2" data-placeholder="Cari...">
+                                                    <option></option>
+                                                    <option>ABC-01 | Kecap ABC 1 Liter</option>
+                                                    <option>PCL-4B | Pensil 4B</option>
+                                                    <option>MSO-WR | Mouse Wireles</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label required>Kuantitas</label>
+                                                <input type="text" class="form-control mask-number" value="1" required>
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label>Satuan</label>
+                                                <input type="text" class="form-control mask-number" placeholder="-" readonly>
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label>Harga Satuan</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Rp</span>
+                                                    </div>
+                                                    <input type="text" class="form-control mask-money" placeholder="0" readonly>
+                                                    <i class="form-group__bar"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label>Diskon</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control mask-money" placeholder="0" readonly>
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">%</span>
+                                                    </div>
+                                                    <i class="form-group__bar"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label>Total</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Rp</span>
+                                                    </div>
+                                                    <input type="text" class="form-control mask-money" placeholder="0" readonly>
+                                                    <i class="form-group__bar"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <a href="javascript:;" class="btn btn-light btn-block">
+                                                <i class="zmdi zmdi-plus-circle"></i> Masukan
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <table id="checkout-table" class="table table-bordered bg-white">
+                                        <thead class="thead-default">
+                                            <tr>
+                                                <th>Kode Barang</th>
+                                                <th>Nama Barang</th>
+                                                <th>Kuantitas</th>
+                                                <th>Satuan</th>
+                                                <th>Harga Satuan (Rp)</th>
+                                                <th>Diskon (%)</th>
+                                                <th>Total (Rp)</th>
+                                                <th width="50"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>PCL-2B</td>
+                                                <td>Pencil 2B</td>
+                                                <td>2</td>
+                                                <td>Buah</td>
+                                                <td>1.500</td>
+                                                <td>0</td>
+                                                <td>3.000</td>
+                                                <td align="center">
+                                                    <button class="btn btn-sm btn-danger"><i class="zmdi zmdi-delete"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>BKU-GBA4</td>
+                                                <td>Buku Gambar A4</td>
+                                                <td>1</td>
+                                                <td>Buah</td>
+                                                <td>5.000</td>
+                                                <td>0</td>
+                                                <td>5.000</td>
+                                                <td align="center">
+                                                    <button class="btn btn-sm btn-danger"><i class="zmdi zmdi-delete"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card" style="margin-bottom:0px">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <label class="col-sm-3 col-form-label label-checkout">Total Harus Di Bayar</label>
+                                        <div class="col">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Rp</span>
+                                                </div>
+                                                <input type="text" id="checkout-bayar" class="form-control mask-money input-checkout" placeholder="0" value="8000" readonly>
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label required class="col-sm-3 col-form-label label-checkout">Tunai</label>
+                                        <div class="col">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Rp</span>
+                                                </div>
+                                                <input type="text" id="checkout-tunai" class="form-control mask-money input-checkout" placeholder="0">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-sm-3 col-form-label label-checkout">Kembalian</label>
+                                        <div class="col">
+                                            <div class="input-group" style="margin-bottom:0px">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Rp</span>
+                                                </div>
+                                                <input type="text" id="checkout-kembalian" class="form-control mask-money input-checkout" placeholder="0" readonly>
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="padding-top:20px">
+                        <button type="button" class="btn btn-primary">
+                            <i class="zmdi zmdi-print"></i> BAYAR
+                        </button>
+                        <button type="button" class="btn btn-light" data-dismiss="modal">BATAL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+        <script src="vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+        <script src="vendors/select2/js/select2.full.min.js"></script>
+
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="js/app.min.js"></script>
+
+        <script type="text/javascript">
+            $("#checkout-tunai").keyup(function() {
+                let bayar = $("#checkout-bayar").val().replace(/\./g, "");
+                let tunai = $(this).val().replace(/\./g, "");
+                let kembalian = $("#checkout-kembalian");
+                let total = (tunai - bayar);
+                    total = (total / 1000).toFixed(3);
+
+                kembalian.val(total).mask("#.##0", {reverse: true}).keyup();
+            });
+        </script>
+    </body>
+</html>

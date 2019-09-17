@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Toko Toko-an</title>
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+        <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="css/app.min.css">
+    </head>
+
+    <body data-ma-theme="green">
+        <main class="main main--alt">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+                </div>
+            </div>
+
+            <header class="header">
+                <div class="header__logo">
+
+                    <ul class="top-nav">
+                        <li class="hidden-xl-up"><a href="" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+    
+                        <li>
+                            <div class="user__info" data-toggle="">
+                                <img class="user__img" src="demo/img/headers/logo.png" style="border-radius:0">
+                                <a href="index.html">
+                                    <div style="font-weight:400;font-size:14px;color:#fff;">TOKO TOKO-AN</div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="search">
+                    <div class="search__inner">
+                        <input type="text" class="search__text" placeholder="Cari barang...">
+                        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                    </div>
+                </form>
+
+                <ul class="top-nav">
+                    <li class="hidden-xl-up"><a href="" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+
+                    <li class="dropdown">
+                        <div>
+                            <div class="user__info" data-toggle="dropdown">
+                                <img class="user__img" src="demo/img/profile-pics/8.jpg" alt="">
+                                <div>
+                                    <div><b>Malinda Hollaway</b></div>
+                                    <div>Admin</div>
+                                </div>
+                            </div>
+    
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="pengaturan.html">Pengaturan</a>
+                                <a class="dropdown-item" href="login.html">Keluar</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="top-menu">
+                    <li class="active"><a href="index.html">Beranda</a></li>
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown">Master</a>
+                        <div class="dropdown-menu">
+                            <a href="satuan-barang.html" class="dropdown-item">Satuan Barang</a>
+                        </div>
+                    </li>
+                    <li><a href="stok-barang.html">Stok Barang</a></li>
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown">Administrasi</a>
+                        <div class="dropdown-menu">
+                            <a href="pendapatan.html" class="dropdown-item">Pendapatan</a>
+                            <a href="pengeluaran.html" class="dropdown-item">Pengeluaran</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown">Laporan</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Stok Barang</a>
+                            <a href="#" class="dropdown-item">Pendapatan</a>
+                            <a href="#" class="dropdown-item">Pengeluaran</a>
+                        </div>
+                    </li>
+                </ul>
+            </header>
+
+            <section class="content content--full">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1>Beranda</h1>
+                        <small>
+                            Selamat datang di Toko Toko-an &nbsp;|&nbsp;
+                            <a href="transaksi.html">
+                                Coba mode Kasir
+                            </a>
+                        </small>
+                    </header>
+
+                    <div class="row quick-stats">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="quick-stats__item bg-blue">
+                                <div class="quick-stats__info">
+                                    <h2>580</h2>
+                                    <small>Transaksi Hari Ini</small>
+                                </div>
+
+                                <div class="quick-stats__chart sparkline-bar-stats">6,4,8,6,5,6,7,8,3,5,9,5</div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="quick-stats__item bg-amber">
+                                <div class="quick-stats__info">
+                                    <h2>Rp. 10.110.000</h2>
+                                    <small>Pendapatan Bulan Ini</small>
+                                </div>
+
+                                <div class="quick-stats__chart sparkline-bar-stats">7,8,6,4,6,7,5,7,9,3,6,5</div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="quick-stats__item bg-purple">
+                                <div class="quick-stats__info">
+                                    <h2>Rp. 2.250.500</h2>
+                                    <small>Pendapatan Hari Ini</small>
+                                </div>
+
+                                <div class="quick-stats__chart sparkline-bar-stats">9,4,6,5,6,4,5,7,9,3,6,5</div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="quick-stats__item bg-red">
+                                <div class="quick-stats__info">
+                                    <h2>Rp. 802.000</h2>
+                                    <small>Pengeluaran Hari Ini</small>
+                                </div>
+
+                                <div class="quick-stats__chart sparkline-bar-stats">5,6,3,9,7,5,4,6,5,6,4,9</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Transaksi</h4>
+                                    <h6 class="card-subtitle">Data di tampilkan untuk bulan September</h6>
+
+                                    <div class="flot-chart flot-curved-line"></div>
+                                    <div class="flot-chart-legends flot-chart-legends--curved"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Pendapatan</h4>
+                                    <h6 class="card-subtitle">Data di tampilkan untuk hari ini dan kemarin</h6>
+
+                                    <div class="flot-chart flot-line"></div>
+                                    <div class="flot-chart-legends flot-chart-legends--line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="footer">
+                        <p>© Toko Toko-an. All rights reserved.</p>
+                    </footer>
+                </div>
+            </section>
+        </main>
+
+        <!-- Javascript -->
+        <!-- ../vendors -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+
+        <!-- Charts and maps-->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="js/app.min.js"></script>
+    </body>
+</html>
